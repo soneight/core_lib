@@ -1,7 +1,7 @@
 # CORE_LIB
 > C++17 Core Library
 
-Project Overview
+Just POUR type aliases for `P`oin`t`e`r`s, `Uni`versal references, `Out`put references, `Ref`erences to const and fixed `Arr`ay variants to them
 
 ## [CONTRIBUTING](./CONTRIBUTING.md)
 > Project Contribution Rules
