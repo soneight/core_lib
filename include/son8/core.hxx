@@ -6,14 +6,22 @@
 
 namespace son8::core {
     // POUR ARRays
-    template< typename Type > using Ptr = Type *;
-    template< typename Type > using Out = Type &;
-    template< typename Type > using Uni = Type &&;
-    template< typename Type > using Ref = Type const &;
-    template< typename Type, unsigned Size > using PtrArr = Ptr< Type[Size] >; // Type (*)[Size]
-    template< typename Type, unsigned Size > using OutArr = Out< Type[Size] >; // Type (&)[Size]
-    template< typename Type, unsigned Size > using UniArr = Uni< Type[Size] >; // Type (&&)[Size]
-    template< typename Type, unsigned Size > using RefArr = Ref< Type[Size] >; // Type const (&)[Size]
+    template< typename Type >
+    using Ptr = Type *; // pointer to Type
+    template< typename Type >
+    using Out = Type &; // lvalue reference to Type
+    template< typename Type >
+    using Uni = Type &&; // rvalue reference to Type
+    template< typename Type >
+    using Ref = Type const &; // lvalue reference to constant Type
+    template< typename Type, unsigned Size >
+    using PtrArr = Ptr< Type[Size] >; // Type (*)[Size]: pointer to C-array
+    template< typename Type, unsigned Size >
+    using OutArr = Out< Type[Size] >; // Type (&)[Size]: lvalue reference to C-array
+    template< typename Type, unsigned Size >
+    using UniArr = Uni< Type[Size] >; // Type (&&)[Size]: rvalue reference to C-array
+    template< typename Type, unsigned Size >
+    using RefArr = Ref< Type[Size] >; // Type const (&)[Size]: lvalue reference to constant C-array
     // c base type aliases
     using Char = unsigned char;
     using Diff = c::ptrdiff_t;
