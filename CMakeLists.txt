@@ -14,14 +14,3 @@ target_link_libraries( ${SON8_LIB} INTERFACE son8::c_header son8::cxx_unit )
 # SPDX-License-Identifier: Apache-2.0
 # lib: `core_lib` C++17 Core Library
 # Ⓒ Copyright (c) 2026 Oleg'Ease'Kharchuk ᦒ
-
-
-
-
-
-
-
-
-
-add_executable( temp temp.cxx )
-target_link_libraries( temp PRIVATE son8::core_lib )
