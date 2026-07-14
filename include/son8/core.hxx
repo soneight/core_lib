@@ -3,10 +3,6 @@
 
 #include <son8/core/alias.hxx>
 
-namespace son8::core {
-
-} // namespace
-
 #endif// header
 
 // Apache License 2.0

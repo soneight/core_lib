@@ -1,6 +1,7 @@
 #ifndef SON8_CORE_ALIAS_DATA_HXX
 #define SON8_CORE_ALIAS_DATA_HXX
 
+#include <son8/core/alias/pour.hxx>
 #include <son8/cxx/data.hxx>
 
 namespace son8::core {
