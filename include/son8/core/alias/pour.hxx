@@ -27,8 +27,8 @@ namespace son8::core {
     using Char = char;
     using Half = float;
     using Long = long long;
-    using Sint = signed;
     using Real = double;
+    using Sint = signed;
     using Uint = unsigned;
     using Void = void;
     // `c` base type aliases
