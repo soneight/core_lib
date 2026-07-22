@@ -1,5 +1,5 @@
 cmake_minimum_required( VERSION 3.8...3.27 )
-project( core_lib VERSION 0.0.4 LANGUAGES CXX )
+project( core_lib VERSION 0.0.5 LANGUAGES CXX )
 set( SON8_LIB son8__${PROJECT_NAME} )
 # private configuration under source directory
 add_subdirectory( source )

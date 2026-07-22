@@ -1,7 +1,7 @@
 # CORE_LIB
 > C++17 Core Library
 
-TODO: update overview on first minor version bump
+TODO: update overview and changes on first minor version bump
 
 ## [CONTRIBUTING](./CONTRIBUTING.md)
 > Project Contribution Rules
