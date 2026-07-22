@@ -9,9 +9,9 @@ namespace son8::core {
 
     template< typename Type >
     class Atom final : private cxx::atomic< Type > {
-        // using Type = unsigned;
-        static_assert( cxx::is_nothrow_default_constructible_v< Type >
-            , "son8::core_lib: Atom requires nothrow default constructible type" );
+        static_assert( cxx::is_nothrow_default_constructible_v< Type > and
+            ( cxx::is_integral_v< Type > || cxx::is_pointer_v< Type > )
+            , "son8::core_lib: Atom requires nothrow default constructible, integral or pointer type" );
         using Base = cxx::atomic< Type >;
     public:
         using Base::is_lock_free;
@@ -34,8 +34,8 @@ namespace son8::core {
         Type fetch_combine_ore( Type val ) noexcept { return Base::fetch_xor( val, cxx::memory_order_acq_rel ); }
         Type fetch_combine_ori( Type val ) noexcept { return Base::fetch_or( val, cxx::memory_order_acq_rel ); }
         // math
-        Type fetch_relaxed_inc( Type val ) noexcept { return Base::fetch_add( val, cxx::memory_order_relaxed ); }
-        Type fetch_relaxed_dec( Type val ) noexcept { return Base::fetch_sub( val, cxx::memory_order_relaxed ); }
+        Type fetch_relaxed_inc( Type val = 1 ) noexcept { return Base::fetch_add( val, cxx::memory_order_relaxed ); }
+        Type fetch_relaxed_dec( Type val = 1 ) noexcept { return Base::fetch_sub( val, cxx::memory_order_relaxed ); }
         // swap
         Type exchange_default( Type val ) noexcept { return Base::exchange( val ); }
         // compare and swap
