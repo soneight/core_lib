@@ -2,6 +2,7 @@
 #define SON8_CORE_HXX
 
 #include <son8/core/alias.hxx>
+#include <son8/core/cloak.hxx>
 
 #endif// header
 

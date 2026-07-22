@@ -3,7 +3,8 @@
 
 #include <son8/c/base.hxx>
 #include <son8/cxx/core.hxx>
-
+// NOTE: not forget to include `this` header into every other one
+// \ even it's aliases are not used anywhere to enforce inclusion
 namespace son8::core {
     // `POUR ARRays`
     template< typename Type >
