@@ -4,7 +4,7 @@
 #include <son8/core/alias.hxx>
 #include <son8/core/cloak.hxx>
 
-#endif// header
+#endif//SON8_CORE_HXX
 
 // Apache License 2.0
 // NO WARRANTY OF ANY KIND see <http://www.apache.org/licenses/LICENSE-2.0>
