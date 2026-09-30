@@ -33,7 +33,7 @@ soneight/core_lib C++17 Core Library
     lib: [`NAME`] [LEGEND]
     [COPYRIGHT NOTICE]
     PRACTICAL LICENSE FOOTER END
-===============================================================
+================================================================
 Dependencies: (with same notice)
 -- soneight
 ---- c_header
