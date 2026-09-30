@@ -12,7 +12,7 @@ if( NOT TARGET son8__c_header )
     fetchcontent_declare(
         son8__c_header
         GIT_REPOSITORY https://github.com/soneight/c_header.git
-        GIT_TAG        d7e6e7188101d4af0738a6b3a67d47c180d8c559 # v0.1.1
+        GIT_TAG        8a6c65bb738da26f1852a7e3f251b3a57e394241 # v0.1.2
     )
     fetchcontent_makeavailable( son8__c_header )
 endif( )
@@ -24,11 +24,20 @@ if( NOT TARGET son8__cxx_unit )
     fetchcontent_declare(
         son8__cxx_unit
         GIT_REPOSITORY https://github.com/soneight/cxx_unit.git
-        GIT_TAG        cfdeca7f25de2c1e55e28fc629d7961a0e87d625 # v0.0.1
+        GIT_TAG        8ebb9164b12ee773c1810bd65e21ee029378768d # v0.1.1
     )
     fetchcontent_makeavailable( son8__cxx_unit )
 endif( )
 message( STATUS "${SON8_LIB}: found `son8__cxx_unit` target" )
+
+option( SON8_CORE_LIB_DUMMY_FACE_BUILD "build interface dummy static library" OFF )
+
+if( SON8_CORE_LIB_DUMMY_FACE_BUILD )
+    set( SON8_CORE_LIB_DUMMY_FACE core-dummy_face )
+    add_library( ${SON8_CORE_LIB_DUMMY_FACE} STATIC )
+    target_sources( ${SON8_CORE_LIB_DUMMY_FACE} PRIVATE ${SON8_CORE_LIB_DUMMY_FACE}.cxx )
+    target_link_libraries( ${SON8_CORE_LIB_DUMMY_FACE} PRIVATE ${SON8_LIB} )
+endif( )
 
 # Apache License 2.0
 # NO WARRANTY OF ANY KIND see <http://www.apache.org/licenses/LICENSE-2.0>

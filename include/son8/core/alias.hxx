@@ -3,5 +3,6 @@
 
 #include <son8/core/alias/data.hxx>
 #include <son8/core/alias/pour.hxx>
+#include <son8/core/alias/text.hxx>
 
 #endif // header

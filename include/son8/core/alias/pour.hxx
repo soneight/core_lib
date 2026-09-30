@@ -33,6 +33,7 @@ namespace son8::core {
     using Uint = unsigned;
     using Void = void;
     // `c` base type aliases
+    using Byte = c::byte;
     using Diff = c::ptrdiff_t;
     using Int0 = c::int8_t;  // `2^0 eq 1` byte signed
     using Int1 = c::int16_t; // `2^1 eq 2` byte signed
@@ -52,8 +53,8 @@ namespace son8::core {
     using Flat = cxx::array< Type, size >;
     template< typename Type >
     using Init = cxx::initializer_list< Type >;
-    template< typename First_Type, typename Second_Type >
-    using Pair = cxx::pair< First_Type, Second_Type >;
+    template< typename Type_1st, typename Type_2nd >
+    using Pair = cxx::pair< Type_1st, Type_2nd >;
     // -- chrono
     using Clock = cxx::chrono::steady_clock;
 

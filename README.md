@@ -1,4 +1,4 @@
-# CORE_LIB
+# `CORE_LIB`
 > C++17 Core Library
 
 TODO: update overview and changes on first minor version bump
